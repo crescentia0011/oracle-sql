@@ -113,7 +113,24 @@ WHERE name like '%on____%';
 --date
 SELECT *
 FROM professor
-WHERE hiredate > '99/01/01';
+WHERE hiredate > to_date('99-01-01', 'rr-mm-dd')
+ORDER BY hiredate; --1970.01.01
+
+--학생테이블, 전화번호(지역번호 02, 031, 051, 052, 053)
+--부산(051)에 거주하는 사람의 학생들을 조회
+SELECT *
+FROM student
+WHERE Tel like '051%';
+
+--이름 M으로 시작 8개 이상인 사람만 조회.
+SELECT *
+FROM student
+WHERE name like 'M________%';
+
+--주민번호 10월달에 태어난 사람 조회
+SELECT *
+FROM student
+WHERE jumin like '__10%';
 
 
 
