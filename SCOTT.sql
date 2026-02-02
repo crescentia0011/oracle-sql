@@ -1,17 +1,17 @@
---Orecle(DBMS) -  version(21c) - xe(database¸í)
--- user(scott) - Å×ÀÌºí.
+--Orecle(DBMS) -  version(21c) - xe(databaseëª…)
+-- user(scott) - í…Œì´ë¸”.
 -- Structured Query Language (SQL)
-SELECT studno, name --Ä®·³¸í(ÀüÃ¼)
-FROM student; --Å×ÀÌºí.
+SELECT studno, name --ì¹¼ëŸ¼ëª…(ì „ì²´)
+FROM student; --í…Œì´ë¸”.
 
--- 1.table = professor Å×ÀÌºí ÀüÃ¼ Ä®·³ Á¶È¸
+-- 1.table = professor í…Œì´ë¸” ì „ì²´ ì¹¼ëŸ¼ ì¡°íšŒ
 SELECT * 
 FROM professor;
 
---2) ÇĞ»ı -> ÇĞ»ı¹øÈ£, ÀÌ¸§, ÇĞ³â
+--2) í•™ìƒ -> í•™ìƒë²ˆí˜¸, ì´ë¦„, í•™ë…„
 SELECT studno, name, grade
 FROM student;
 
-
+--ìˆ™ì œì™„ë£Œí•¨
 
 
