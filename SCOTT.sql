@@ -8,6 +8,10 @@ FROM student; --테이블.
 SELECT * 
 FROM professor;
 
+--2) 학생 -> 학생번호, 이름, 학년
+SELECT studno, name, grade
+FROM student;
+
 
 
 
