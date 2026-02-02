@@ -132,6 +132,11 @@ SELECT *
 FROM student
 WHERE jumin like '__10%';
 
+SELECT (ename ||'`s sal is $' || sal) as "NAME And Sal"
+FROM emp;
+
+
+
 
 
 
