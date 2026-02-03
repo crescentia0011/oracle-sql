@@ -447,22 +447,16 @@ select
 FROM
       student;
 
+-- 학생테이블의 생년월일을 기준으로 1~3 => 1/4분기, 4~6=> 2/4, 7~9, 10~11
 select
-      birthday,
-      substr (
-            birthday,
-            instr (birthday, '/', 1),
-            (
-                  instr (birthday, '/'),
-                  2,
-                  - instr (birthday, '/', 1)
-            )
+      (
+            TO_NUMBER (TO_CHAR (TO_DATE (birthday, 'YYYY/MM/DD'), 'MM')) / 3
       )
-FROM
+from
       student;
 
--- 학생테이블의 생년월일을 기준으로 1~3 => 1/4분기, 4~6=> 2/4, 7~9, 10~11
 SELECT
+      name,
       DECODE (
             CEIL(
                   TO_NUMBER (TO_CHAR (TO_DATE (birthday, 'YYYY/MM/DD'), 'MM')) / 3
