@@ -213,6 +213,8 @@ CREATE TABLE board(
     --테이블 칼럼 수정
     ALTER TABLE board
     modify content varchar2(2000);
+    ALTER TABLE board
+    modify click_count number default 0;
     --테이블 정보 보기
     desc board;
 INSERT INTO board(board_no, title, writer, content) 
@@ -224,3 +226,11 @@ FROM board;
 update board
 set title = 'test3'
 where board_no = 3;
+
+update board
+set title = 'test3'
+where board_no = 3;
+
+update board
+set click_count =0;
+
