@@ -448,27 +448,18 @@ FROM
       student;
 
 -- 학생테이블의 생년월일을 기준으로 1~3 => 1/4분기, 4~6=> 2/4, 7~9, 10~11
-select
-      (
-            TO_NUMBER (TO_CHAR (TO_DATE (birthday, 'YYYY/MM/DD'), 'MM')) / 3
-      )
-from
-      student;
 
 SELECT
-      name,
-      DECODE (
-            CEIL(
-                  TO_NUMBER (TO_CHAR (TO_DATE (birthday, 'YYYY/MM/DD'), 'MM')) / 3
-            ),
-            1,
-            '1/4분기',
-            2,
-            '2/4분기',
-            3,
-            '3/4분기',
-            4,
-            '4/4분기'
-      ) AS 분기설정
+      name
+     ,CEIL(
+           TO_NUMBER (TO_CHAR (birthday, 'MM')) / 3
+           )||'/4분기' AS 분기설정
 FROM
       student;
+      
+ select name
+        ,to_char(birthday, 'Q') || '/4' 분기
+        ,birthday
+from
+      student;     
+      
